@@ -392,6 +392,7 @@ input, textarea {
     outline: none;
     border-radius: 4px;
     font-size: 13px;
+    color: #fdfdfd;
     background-color: rgb(23, 20, 20);
 }
 
@@ -628,7 +629,7 @@ body {
     background-image: url('myimage480px.png'); /* Specify a different background image for smaller devices */
 }
 .contact-form{
-    margin-left: 3px;
-    max-width: 275px;
+    margin-left: 13px;
+    max-width: 355px;
 }
 }
