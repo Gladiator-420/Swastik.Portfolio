@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x icon" href="rocket.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swastik Portfolio</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <ul>
+                <li class="SPD">SPD</li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="fas fa-bars toggle-button"></i>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="home">
+            <span id="typing-text"></span><span class="cursor">|</span>
+            <p class="intro">Hi, I am <span class="Swastik">SWASTIK</span> <br>from India</p>
+        </div>
+
+        <section class="cards-section" id="about">
+            <h1 class="section-heading"><span class="section-heading-text">About me</span></h1>
+            <div class="about-container">
+                <div class="about-card">
+                    <img class="about-image" src="Model.avif" alt="Your Image">
+                </div>
+                <div class="about-text">
+                    <p>Stepping into the exciting world of full-stack development, I'm a recent graduate fueled by a passion for crafting seamless web experiences. Driven by an insatiable curiosity and a knack for problem-solving, I find joy in translating complex ideas into user-friendly interfaces and robust backend structures. While my journey is just beginning, I'm energized by a constant hunger for knowledge and a dedication to pushing the boundaries of my capabilities. Dive into my portfolio and witness the potential unfolding, project by project.</p>
+                </div>
+            </div>
+            <hr class="card-divider">
+           
+            <h1 class="section-heading"><span class="section-heading-text">Services</span></h1>
+            <div class="card1">
+                <div class="card-content">
+                   <span class="card-icon"><i class="fas fa-paint-brush"></i></span> 
+                    <h3 class="card-heading">UX/UI Design</h3>
+                    <p>I craft user-centric experiences that are both visually stunning and functionally intuitive. I bridge the gap between design and development, delivering solutions that drive engagement and achieve business goals.</p>
+                </div>
+            </div>
+            <div class="card2" id="services">
+                <div class="card-content">
+                  <span class="card-icon">  <i class="fas fa-code"></i> </span><!-- Web Development Icon -->
+                     <h3 class="card-heading">Web Development</h3>
+                    <p>I craft high-performance web experiences using React.Js, javascript, css . My passion lies in building modern, scalable solutions that deliver results. Explore my portfolio to see my work in action!</p>
+                </div>
+            </div>
+            <div class="card3">
+                <div class="card-content">
+                    <span class="card-icon"> <i class="fas fa-cogs"></i></span> <!-- Software Development Icon -->
+                    <h3 class="card-heading">Software Devlopment</h3>
+                    <p>Crafting innovative solutions with 3 years of experience in web development, mobile app development, etc. Possesses a strong understanding of Java, javascript, React.Js and thrives on tackling complex challenges. Passionate about building user-centric applications that deliver impactful results.</p>
+                </div>
+            </div>
+            <hr class="card-divider">
+            <h1 class="section-heading"><span class="section-heading-text">Contact</span></h1>
+            <section class="contact-section" >
+                <form class="contact-form" action="send-email.php" method="post">
+                    <div class="input-container">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-container"id="contact">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required ></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            
+                <div class="social-icons">
+                    <a href="https://x.com/Panda_DNF?t=T25BpZvAMFZPJ4actCE4tA&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/swastik_panda01?igsh=YmJyZTVkZWM1aGY2" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://telegram.org/dl" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    <a href="swastikpanda011@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/qr/XRQSIJWRV3TSH1" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </section>
+
+    </div>
+    <script src="t2.js"></script>
+    <script src="scroll.js"></script>
+</body>
+</html>
