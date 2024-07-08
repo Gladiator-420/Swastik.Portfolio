@@ -381,6 +381,10 @@ li {
 label{
     font-size: 20px;
 }
+input{
+    font-size: 20px;
+    color: #ffffff;
+}
 input, textarea {
     width: 100%;
     padding: 15px;
@@ -388,7 +392,7 @@ input, textarea {
     outline: none;
     border-radius: 4px;
     font-size: 13px;
-    background-color: rgb(25, 21, 21);
+    background-color: rgb(23, 20, 20);
 }
 
 textarea {
@@ -622,5 +626,9 @@ color:#fff;}
 }
 body {
     background-image: url('myimage480px.png'); /* Specify a different background image for smaller devices */
+}
+.contact-form{
+    margin-left: 3px;
+    max-width: 275px;
 }
 }
