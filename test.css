@@ -13,6 +13,27 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+
+/* Webkit-based browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    border-radius: 16px; /* Makes the edges of the scrollbar curvy */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ff004f; /* Color of the scroll thumb */
+    border-radius: 6px; /* Rounding the scroll thumb */
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0); /* Background of the scrollbar track */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin; /* Sets the width of the scrollbar */
+    scrollbar-color: #ff004f black; /* Sets the color of the scrollbar thumb and track */
+}
+
 #typing-text {
     font-family: verdana;
     color: rgb(255, 255, 255);
