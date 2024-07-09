@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const typingSpeed = 150;
     const erasingSpeed = 100;
     const delayBeforeStartTyping = 1000;
+    const viewportHeight = window.innerHeight;
 
     function typeWriter() {
         const currentText = texts[textIndex];
@@ -34,8 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleScroll() {
         const cardsSection = document.querySelector(".cards-section");
         const sectionPosition = cardsSection.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
-
+        
         if (sectionPosition <= viewportHeight * 0.75) {
             cardsSection.classList.add("visible");
         }
@@ -43,28 +43,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-    
+
     window.addEventListener("scroll", function() {
         const scrollPosition = window.scrollY;
         const body = document.body;
-        
+
         // Adjust background size based on scroll position
         body.style.backgroundSize = (100 + scrollPosition / 5) + "%";
-        
+
         // Roll up the main image
         if (scrollPosition > viewportHeight) {
             body.style.backgroundPositionY = -(scrollPosition - viewportHeight) + "px";
         }
     });
-});
-document.querySelector('.toggle-button').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('active');
-});const toggleButton = document.querySelector('.toggle-button');
 
-toggleButton.addEventListener('click', () => {
-  toggleButton.classList.toggle('active');
-});
-document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.toggle-button');
+    toggleButton.addEventListener('click', () => {
+        toggleButton.classList.toggle('active');
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+
     const links = document.querySelectorAll('.nav-item a');
 
     for (const link of links) {
@@ -81,5 +79,29 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     }
-});
 
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+
+            // Hide all tab contents
+            tabContents.forEach(tabContent => {
+                tabContent.style.display = 'none';
+            });
+
+            // Show the selected tab content
+            document.getElementById(targetTab).style.display = 'block';
+
+            // Remove 'active' class from all buttons
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked button
+            button.classList.add('active');
+        });
+    });
+});
