@@ -329,7 +329,6 @@ li {
 }
 
 .about-text {
-    margin-bottom: 20%;
     max-width: 45%;
 }
 
@@ -342,6 +341,64 @@ li {
     box-shadow: 0 4px 8px rgba(254, 2, 162, 0.119);
     transform: translateY(-10px);
 }
+.tabs{margin-top: 10px;}
+.tab-container {
+    
+    display: flex;
+    gap: 20px;
+}
+
+.tab-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.tab-button.active{
+    background-color: #ff004f;
+}
+.tab-content li{
+    margin-bottom: 12px;
+}
+.tab-content {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(7,7,7,7);
+    color: white;
+    width: 90%;
+    font-size: 11px;
+    max-width: 800px;
+    height: 120px; /* Fixed height for all sections */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+
+.tab-content.active {
+    display: block;
+}
+
+
+
+.tab-content ul {
+    
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+.tab-li{color: #ff004f;
+font-size: 15px;}
+
+
+
 
 .section-heading {
     display: flex;
@@ -529,7 +586,14 @@ textarea {
 .social-icon:hover {
 color:#fff;}
 
-
+ footer {
+            background-color: #201d1d;
+            padding: px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #ffffff;
+            width: 100%;
+        }
 
 @media (max-width: 1280px){
     .card-content p{
@@ -577,10 +641,27 @@ color:#fff;}
 
 .card-divider{
     margin: 50px;
-}}
+}
+}
 
 
 @media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack the about card and text vertically */
+    }
+    
+    .about-card {
+        margin-left: 0;
+        width: 60%;
+    }
+    
+    .about-text {
+        margin-left: 0;
+        width: 90%;
+        max-width: 100%;
+        text-align: center;
+        margin-top: 20px; /* Add some spacing above the text */
+    }
     .button-49,
     .button-49:after {
       width: 100px;
@@ -736,11 +817,18 @@ color:#fff;}
 .main-image-container {
     height: 100vh;
 }
+
 body {
     background-image: url('myimage480px.png'); /* Specify a different background image for smaller devices */
 }
 .contact-form{
     margin-left: 13px;
     max-width: 330px;
+}
+.tab-li{
+    font-size: 13px;
+}
+.tab-content{
+    font-size: 12px;
 }
 }
