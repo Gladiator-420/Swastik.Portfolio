@@ -1,28 +1,34 @@
 <?php
-  // Configuration
-  $to_email = 'your_email_address@example.com'; // Your email address
-  $subject = 'New Message from Website';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve the form data
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
 
-  // Get form data
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $message = $_POST['message'];
+    // Set the recipient email address
+    $to = "swastikpanda0111@gmail.com"; // Replace with your email address
 
-  // Create email headers
-  $headers = 'From: ' . $email . "\r\n" .
-             'Reply-To: ' . $email . "\r\n" .
-             'MIME-Version: 1.0' . "\r\n" .
-             'Content-Type: text/html; charset=UTF-8';
+    // Set the email subject
+    $subject = "New contact form submission from $name";
 
-  // Create email body
-  $body = '<p>Name: ' . $name . '</p>' .
-           '<p>Email: ' . $email . '</p>' .
-           '<p>Message: ' . $message . '</p>';
+    // Build the email content
+    $email_content = "Name: $name\n";
+    $email_content .= "Email: $email\n\n";
+    $email_content .= "Message:\n$message\n";
 
-  // Send email
-  if (mail($to_email, $subject, $body, $headers)) {
-    echo 'Email sent successfully!';
-  } else {
-    echo 'Error sending email!';
-  }
+    // Set the email headers
+    $headers = "From: $name <$email>";
+
+    // Send the email
+    if (mail($to, $subject, $email_content, $headers)) {
+        // Email sent successfully
+        echo "Thank you for your message, $name. We will get back to you soon.";
+    } else {
+        // Email sending failed
+        echo "Sorry, something went wrong. Please try again later.";
+    }
+} else {
+    // Invalid request method
+    echo "Invalid request.";
+}
 ?>
