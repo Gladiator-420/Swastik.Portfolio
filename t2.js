@@ -51,16 +51,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // Adjust background size based on scroll position
         body.style.backgroundSize = (100 + scrollPosition / 5) + "%";
 
-        // Roll up the main image
-        if (scrollPosition > viewportHeight) {
-            body.style.backgroundPositionY = -(scrollPosition - viewportHeight) + "px";
-        }
+       
     });
 
     const toggleButton = document.querySelector('.toggle-button');
+    const navLinks = document.querySelector('.nav-links');
     toggleButton.addEventListener('click', () => {
         toggleButton.classList.toggle('active');
-        document.querySelector('.nav-links').classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!toggleButton.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove('active');
+        }
     });
 
     const links = document.querySelectorAll('.nav-item a');
