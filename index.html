@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="nav-left">
             <ul>
@@ -41,14 +42,12 @@
                 <div class="about-text">
                     <p>Stepping into the exciting world of full-stack development, I'm a recent graduate fueled by a passion for crafting seamless web experiences. Driven by an insatiable curiosity and a knack for problem-solving, I find joy in translating complex ideas into user-friendly interfaces and robust backend structures. While my journey is just beginning, I'm energized by a constant hunger for knowledge and a dedication to pushing the boundaries of my capabilities. Dive into my portfolio and witness the potential unfolding, project by project.</p>
                     
-                    <!-- Tabs integrated into the about text -->
                     <div class="tabs">
                         <button class="tab-button active" data-tab="skills">Skills</button>
                         <button class="tab-button" data-tab="experience">Experience</button>
                         <button class="tab-button" data-tab="education">Education</button>
                     </div>
 
-                    <!-- Tab content integrated into the about text -->
                     <div class="tab-content active" id="skills">
                         <ul>
                             <li><span class="tab-li">UX/UI</span><br>
@@ -110,7 +109,9 @@
             <hr class="card-divider">
             <h1 class="section-heading"><span class="section-heading-text">Contact</span></h1>
             <section class="contact-section" >
-                <form class="contact-form" action="send-email.php" method="post">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="a77d98df-1da1-4802-92f5-b81dde17ae27">
+
                     <div class="input-container">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -119,6 +120,8 @@
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
                     <div class="input-container"id="contact">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Your Message" rows="5" required ></textarea>
