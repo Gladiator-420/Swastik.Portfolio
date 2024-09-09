@@ -17,7 +17,7 @@ body {
 
 /* Webkit-based browsers */
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+width: 12px; /* Width of the scrollbar */
     border-radius: 16px; /* Makes the edges of the scrollbar curvy */
 }
 ::-webkit-scrollbar-thumb {
@@ -200,7 +200,7 @@ li {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly ;
     align-items: center;
     gap: 40px; /* Adjust the gap between cards */
     padding: 20px 0;
@@ -295,7 +295,7 @@ li {
 
 .card-content p {
     margin: 10px;
-    font-size: 12px;
+    font-size: 12px !important;
     color: rgb(255, 255, 255);
     text-align: center;
 }
